@@ -9,6 +9,6 @@ namespace Pagos.Data
         {
 
         }
-        public DbSet<fPagoContribAseIdep> fPagoContribAseldeps { get; set; }
+        public DbSet<fPagoContribAseIdep> fPagoContribAseldeps { get; set; } = null!;
     }
 }

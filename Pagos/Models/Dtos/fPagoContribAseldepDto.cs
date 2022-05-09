@@ -16,9 +16,9 @@ namespace Pagos.Models.Dtos
 
         public int nuaCua { get; set; }
 
-        public int periodoCotizacion { get; set; }
+        public string? periodoCotizacion { get; set; }
 
-        public DateTime fechaPago { get; set; }
+        public string? fechaPago { get; set; }
 
         public string? perfilEdad { get; set; }
 

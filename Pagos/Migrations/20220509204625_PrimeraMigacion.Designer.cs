@@ -11,8 +11,8 @@ using Pagos.Data;
 namespace Pagos.Migrations
 {
     [DbContext(typeof(AplicationDbContext))]
-    [Migration("20220506215037_m")]
-    partial class m
+    [Migration("20220509204625_PrimeraMigacion")]
+    partial class PrimeraMigacion
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -35,3 +35,17 @@ D:\Gestora2022\Pagos\Pagos\obj\Debug\net6.0\Pagos.genruntimeconfig.cache
 D:\Gestora2022\Pagos\Pagos\obj\Debug\net6.0\ref\Pagos.dll
 D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\AutoMapper.dll
 D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\itext.barcodes.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\itext.forms.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\itext.io.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\itext.kernel.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\itext.layout.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\itext.pdfa.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\itext.sign.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\itext.styledxmlparser.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\itext.svg.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\itext.commons.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Gestora2022\Pagos\Pagos\bin\Debug\net6.0\BouncyCastle.Crypto.dll

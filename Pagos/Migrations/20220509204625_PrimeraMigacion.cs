@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Pagos.Migrations
 {
-    public partial class m : Migration
+    public partial class PrimeraMigacion : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
