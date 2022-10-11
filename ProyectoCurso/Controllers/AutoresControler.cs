@@ -15,21 +15,23 @@ namespace ProyectoCurso.Controllers
             this.constext = context;
         }
 
-        [HttpGet]
+        [HttpGet]//Api/autores
+        [HttpGet("listado")]//Api/autores/listado
+        [HttpGet("/listado")]//listado
         public async Task<ActionResult<List<Autor>>> GetAutores()
         {
             return await constext.Autores.Include(x => x.Libros).ToListAsync();
         }
 
         [HttpGet("primero")]
-        public async Task<ActionResult<Autor>> PrimerAutor()
+        public async Task<ActionResult<Autor>> PrimerAutor([FromHeader] int miValor, [FromQuery] string nombre)
         {
             return await constext.Autores.FirstOrDefaultAsync();
         }
 
 
         [HttpPost]
-        public async Task<ActionResult> Post(Autor autor) {
+        public async Task<ActionResult> Post([FromBody]Autor autor) {
             constext.Add(autor);
             await constext.SaveChangesAsync();
             return Ok();

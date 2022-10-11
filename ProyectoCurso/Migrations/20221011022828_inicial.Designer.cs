@@ -11,8 +11,8 @@ using ProyectoCurso;
 namespace ProyectoCurso.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221008220155_Inicial")]
-    partial class Inicial
+    [Migration("20221011022828_inicial")]
+    partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,6 +37,43 @@ namespace ProyectoCurso.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Autores");
+                });
+
+            modelBuilder.Entity("ProyectoCurso.Controllers.Entidades.Libro", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
+
+                    b.Property<int>("AutorId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Titulo")
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("AutorId");
+
+                    b.ToTable("Libros");
+                });
+
+            modelBuilder.Entity("ProyectoCurso.Controllers.Entidades.Libro", b =>
+                {
+                    b.HasOne("ProyectoCurso.Controllers.Entidades.Autor", "Autor")
+                        .WithMany("Libros")
+                        .HasForeignKey("AutorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Autor");
+                });
+
+            modelBuilder.Entity("ProyectoCurso.Controllers.Entidades.Autor", b =>
+                {
+                    b.Navigation("Libros");
                 });
 #pragma warning restore 612, 618
         }
