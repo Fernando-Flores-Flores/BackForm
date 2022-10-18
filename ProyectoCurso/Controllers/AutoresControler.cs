@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProyectoCurso.Controllers.Entidades;
+using ProyectoCurso.Servicios;
 
 namespace ProyectoCurso.Controllers
 {
@@ -10,9 +11,12 @@ namespace ProyectoCurso.Controllers
     public class AutoresControler : ControllerBase
     {
         public readonly ApplicationDbContext constext;
-        public AutoresControler(ApplicationDbContext context)
+        private readonly IServicio servicio;
+
+        public AutoresControler(ApplicationDbContext context ,IServicio servicio)
         {
             this.constext = context;
+            this.servicio = servicio;
         }
 
         [HttpGet]//Api/autores
@@ -32,10 +36,19 @@ namespace ProyectoCurso.Controllers
 
         [HttpPost]
         public async Task<ActionResult> Post([FromBody]Autor autor) {
+            var existeAUtorConMismoNombre = await constext.Autores.AnyAsync(x=>x.Nombre == autor.Nombre);
+            if (existeAUtorConMismoNombre)
+            {
+
+                return BadRequest($"Ya existe un autor co el mismo nombre{autor.Nombre}");
+            }
+            
+            
             constext.Add(autor);
             await constext.SaveChangesAsync();
             return Ok();
         }
+
         [HttpPut("{id:int}")] //api/autores/1
         public async Task<ActionResult> Put(Autor autor,int id)
         {

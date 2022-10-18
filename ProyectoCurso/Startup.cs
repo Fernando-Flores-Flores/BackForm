@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ProyectoCurso.Controllers;
+using ProyectoCurso.Servicios;
 using System.Text.Json.Serialization;
+using static ProyectoCurso.Servicios.IServicio;
 
 namespace ProyectoCurso
 {
@@ -7,6 +10,7 @@ namespace ProyectoCurso
     {
         public Startup(IConfiguration configuration)
         {
+         //   var autoresControler = new AutoresControler(new ApplicationDbContext(null), new ServicioA());
             Configuration = configuration;
         }
 
