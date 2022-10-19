@@ -1,8 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProyectoCurso.Controllers;
-using ProyectoCurso.Servicios;
 using System.Text.Json.Serialization;
-using static ProyectoCurso.Servicios.IServicio;
 
 namespace ProyectoCurso
 {
@@ -10,7 +7,6 @@ namespace ProyectoCurso
     {
         public Startup(IConfiguration configuration)
         {
-         //   var autoresControler = new AutoresControler(new ApplicationDbContext(null), new ServicioA());
             Configuration = configuration;
         }
 
@@ -26,6 +22,8 @@ namespace ProyectoCurso
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
+            //Configuracion de automapper
+            services.AddAutoMapper(typeof(Startup));
         }
 
         public void Configure(IApplicationBuilder app,IWebHostEnvironment env) {

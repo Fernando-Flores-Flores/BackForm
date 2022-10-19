@@ -13,6 +13,8 @@ namespace ProyectoCurso
 
         public DbSet<Autor> Autores { get; set; }
         public DbSet<Libro> Libros { get; set; }
+        public DbSet<Personas> Personas{ get; set; }
+
 
     }
 }
